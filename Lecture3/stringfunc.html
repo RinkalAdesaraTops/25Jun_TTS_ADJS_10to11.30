@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String Function Example</h3>
+    
+    <script>
+        let str="Hello  World..!! "
+        console.log("Length is "+str.length);
+        console.log("Uppercase is "+str.toUpperCase());
+        console.log("Lowercase is "+str.toLowerCase());
+        let a = str.slice(1)
+        console.log("String is "+str);
+        console.log("Slice String is "+a);
+        a = str.slice(1,6)
+        console.log("Slice String is "+a);
+        a= str.slice(-16)
+        console.log("Slice String is "+a);
+
+        let b = str.substr(0,5)
+        console.log("substr is "+b);
+
+        let pr = "Hi test fdgjdfh Hi testt"
+        let newstr = pr.replace("Hi","Hello")
+        console.log("string is "+pr);
+        console.log("replace string is "+newstr);
+        let pr1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, natus minus. Blanditiis qui reiciendis quaerat Lorem sint aliquid sit eius Lorem nesciunt necessitatibus, doloribus atque suscipit aspernatur? Enim, quisquam voluptas?";
+        document.write(pr1)
+        let newstr1 = pr1.replaceAll("Lorem","Hello")
+        document.write("<br>")
+        document.write("----------------------")
+        document.write("<br>")
+        document.write(newstr1)
+        let str_new = "            Hello-- Ad JS started---        " 
+        console.log(str_new);
+        document.write("before trim -- "+str_new.length)
+        let strupd = str_new.trim()
+        console.log(strupd);
+        //trim() trimStart() trimEnd()
+
+        document.write("After trim "+strupd.length)
+        document.write("start trim "+str_new.trimStart().length)
+        document.write("End trim "+str_new.trimEnd().length)
+
+        let rs = "5"
+        let nStr = rs.padStart(4," ") //RSR500
+        console.log(nStr);
+        nStr = rs.padEnd(5,"$@#") //RSR500
+        console.log(nStr);
+
+        let cStr = "Hello Hi How Are you?";
+
+        let countStr = cStr.charAt(5)
+        console.log(countStr);
+        countStr = cStr.charCodeAt(6)
+        console.log(countStr);
+    </script>
+</body>
+</html>

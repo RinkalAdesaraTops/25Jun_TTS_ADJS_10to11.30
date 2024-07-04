@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["10","2","30","435","52","74"]
+        let str_arr = ["hello","abc","xyz","idhfg","test"]
+        let obj = {
+            name:"Test",
+            age:25,
+            salary:25000,
+            per:75.25
+        }
+        obj.surname = "Soni"
+        console.log(obj.name);
+        console.log(obj['name']);
+        console.log(str_arr[0]);
+
+        // document.write('arr length is '+arr.length)
+        // document.write('String arr length is '+str_arr.length+"<br>")
+
+        // document.write('Array sorting '+arr.sort()+"<br>")
+        // document.write('String Array sorting '+str_arr.sort()+"<br>")
+
+        // document.write('Array sorting '+arr.reverse()+"<br>")
+        // document.write('String Array sorting '+str_arr.reverse())
+        // arr.sort() - compare function
+        let ans = arr.sort((a,b)=>{
+                console.log(a);
+                console.log(b);
+                return a-b; //a=10 b=2 10-2=8 2,10
+                    //a=10,b=30 10-30= -20
+        })
+
+        document.write('Array sorting '+ans+"<br>")
+        
+    </script>
+</body>
+</html>
