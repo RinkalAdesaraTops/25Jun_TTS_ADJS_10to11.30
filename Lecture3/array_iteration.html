@@ -7,14 +7,29 @@
 </head>
 <body>
     <div id="demo"></div>
+    <div id="demo1"></div>
     <script>
-        const numbers = [45, 4, 9, 16, 25];
+        const numbers = [2, 4, 9, 5, 7];
         let tr = '<ul type="circle">';
         numbers.forEach((i)=>{
             tr += "<li>"+i+"</li>"
         })
         tr += '</ul>';
         document.getElementById("demo").innerHTML = tr
+
+        let data = numbers.map((i)=> i*2)
+        console.log(data);
+        data.forEach((i)=>{
+            tr += "<li>"+i+"</li>"
+        })
+        tr += '</ul>';
+        // document.getElementById("demo").innerHTML = tr
+        document.getElementById("demo1").innerHTML = tr
+
+        ///foreach -- Loop,data traverse,doesn't return any value or array
+
+        //map --- function,data traverse,always return array,create copy of array, doesnot change original array
+        // filter function-searching
     </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10,20,30,40,50]
+        let search = arr.filter((i)=>{
+                return (i==20 || i==30)
+        })
+    console.log(search);
+    let len = search.length
+    if(len>0){
+        document.write('20 is found')
+    } else {
+        document.write('20 is not found')
+    }
+
+    let new_arr = [1,2,3,4,5]
+    let sum = new_arr.reduceRight((total,i)=>{
+        console.log("Total is "+total);
+        return total+i
+
+    }) //sum = sum+i
+    document.write('Sum is '+sum)
+    //foreach,map,reduce,reduceRight,filter
+
+    //includes
+    let ans = new_arr.includes(2) //boolean - true,false
+    console.log("Ans is "+ans);
+    </script>
+</body>
+</html>
