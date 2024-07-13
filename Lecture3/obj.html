@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="demo">
-        <input type="text" name="search" id="" placeholder="--Search--"><br><br>
+        <input type="text" name="search" id="search" placeholder="--Search--" oninput="searchData(this)"><br><br>
         <table border="2">
             <thead>
                 <tr>
@@ -23,11 +23,7 @@
         </table>
     </div>
     <script>
-        let obj = {
-            id:101,
-            name:"dsfd",
-            age:25
-        }
+        let tbl ='';
         let arr_obj = [
             {
                 id:101,
@@ -41,7 +37,7 @@
             },
             {
                 id:103,
-                name:"pqr",
+                name:"test123",
                 age:22
             },
             {
@@ -50,20 +46,36 @@
                 age:22
             }
         ]
-        let ans = arr_obj.filter((i)=>{
-                return i.age==22
-        })
-        console.log(ans);
-        let tbl = '';
-        arr_obj.map((i)=>{
-            tbl += `<tr>
-                        <td>${i.id}</td>
-                        <td>${i.name}</td>
-                        <td>${i.age}</td>
-                    </tr>`
-        })
-        document.getElementById('allUserData').innerHTML = tbl
+        
+       
 
+        const searchData = (e)=>{
+            let txt = e.value;
+            console.log(e.value);
+            let arr1 = arr_obj.filter((i)=>{
+                //i.name = test.includes(t)
+                       if(i.name.includes(txt)){
+                            return i;
+                       } else {
+                            return '';
+                       }
+            })
+            disp(arr1)
+           
+        }
+
+        const disp = (arr_obj)=>{
+            tbl ='';
+            arr_obj.map((i)=>{
+                tbl += `<tr>
+                            <td>${i.id}</td>
+                            <td>${i.name}</td>
+                            <td>${i.age}</td>
+                        </tr>`
+            })
+            document.getElementById('allUserData').innerHTML = tbl
+        }
+        disp(arr_obj)
     </script>
 </body>
 </html>

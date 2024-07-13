@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>Click anywhere in the document to display
+<a id="linkTxt" target="_blank">"Hello World!". </a>
+<img src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg"  height="30px" width="30px" id="txt"/>
+</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("linkTxt").addEventListener("click", myFunction);
+
+function myFunction(e) {
+    e.target.setAttribute("target", "_blank");
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+</body>
+</html>
