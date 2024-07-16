@@ -7,7 +7,14 @@
 </head>
 <body>
     <div id="demo">
-        <input type="text" name="search" id="search" placeholder="--Search--" oninput="searchData(this)"><br><br>
+        <input type="text" name="search" id="search" placeholder="--Search--" oninput="searchData(this)">
+        <select name="">
+            <option>--Search By--</option>
+            <option>--Name--</option>
+            <option>--Age--</option>
+        </select>
+        <br><br>
+
         <table border="2">
             <thead>
                 <tr>
@@ -32,38 +39,35 @@
             },
             {
                 id:102,
-                name:"test",
+                name:"Test",
                 age:25
             },
             {
                 id:103,
                 name:"test123",
-                age:22
+                age:"22"
             },
             {
                 id:104,
                 name:"abcbd",
                 age:22
             }
-        ]
-        
-       
-
+        ]        
         const searchData = (e)=>{
-            let txt = e.value;
+            console.log(e);
+            console.log(e.id);
+            let txt = e.value; 
             console.log(e.value);
             let arr1 = arr_obj.filter((i)=>{
                 //i.name = test.includes(t)
-                       if(i.name.includes(txt)){
+                       if(i.name.toUpperCase().includes(txt) || i.name.toLowerCase().includes(txt)){
                             return i;
                        } else {
                             return '';
                        }
             })
-            disp(arr1)
-           
+            disp(arr1)         
         }
-
         const disp = (arr_obj)=>{
             tbl ='';
             arr_obj.map((i)=>{
@@ -76,6 +80,9 @@
             document.getElementById('allUserData').innerHTML = tbl
         }
         disp(arr_obj)
+
+        
+
     </script>
 </body>
 </html>

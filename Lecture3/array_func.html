@@ -16,9 +16,9 @@
             per:75.25
         }
         obj.surname = "Soni"
-        console.log(obj.name);
-        console.log(obj['name']);
-        console.log(str_arr[0]);
+        // console.log(obj.name);
+        // console.log(obj['name']);
+        // console.log(str_arr[0]);
 
         // document.write('arr length is '+arr.length)
         // document.write('String arr length is '+str_arr.length+"<br>")
@@ -30,13 +30,46 @@
         // document.write('String Array sorting '+str_arr.reverse())
         // arr.sort() - compare function
         let ans = arr.sort((a,b)=>{
-                console.log(a);
-                console.log(b);
+                // console.log(a);
+                // console.log(b);
                 return a-b; //a=10 b=2 10-2=8 2,10
                     //a=10,b=30 10-30= -20
         })
 
         document.write('Array sorting '+ans+"<br>")
+        let arr_obj = [
+            {
+                id:101,
+                name:"dsfd",
+                age:25
+            },
+            {
+                id:102,
+                name:"Test",
+                age:25
+            },
+            {
+                id:103,
+                name:"Test",
+                age:"22"
+            },
+            {
+                id:104,
+                name:"abcbd",
+                age:22
+            }
+        ]        
+        
+        let ans_txt = arr_obj.find((i)=>{
+                return i.name == "Testtriyu"
+        })
+        if(ans_txt == undefined){
+            document.write('No data found')
+        } else {
+            document.write('No data found')
+
+        }
+        console.log(ans_txt);
         
     </script>
 </body>

@@ -11,13 +11,15 @@
 </p>
 
 <p id="demo"></p>
+<p id="demo1"></p>
 
 <script>
 document.getElementById("linkTxt").addEventListener("click", myFunction);
 
 function myFunction(e) {
     e.target.setAttribute("target", "_blank");
-    document.getElementById("demo").innerHTML = "Hello World";
+    document.getElementById("demo").innerHTML = "<b>Hello World</b>";
+    document.getElementById("demo1").innerText = "<b>Hello World</b>";
 }
 </script>
 
