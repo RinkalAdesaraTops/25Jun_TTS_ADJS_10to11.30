@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const isEven = (no)=>{
+            return no%2==0;
+        }
+        const checkData = (func,no)=>{
+            let ans = func(no);
+            document.write('<br> ans is '+ans)
+            if(ans){
+                document.write("<br> No is even")
+            } else {
+                document.write("<br> No is odd")
+
+            }
+        }
+
+        checkData(isEven,25)
+    </script>
+</body>
+</html>

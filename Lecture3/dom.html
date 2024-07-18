@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p>hello</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum hic eius necessitatibus velit expedita maxime soluta enim consequuntur, ex quis voluptates facilis placeat obcaecati. Itaque, ab! Accusantium cumque maxime maiores.</p>
+        <p>test abc</p>
+        <span>dfjhg dkjfhgdfkjg kjhfdg</span>
+    </div><br>
+    <div>
+        <form action="#" method="post" onsubmit="return saveData()">
+                Username: <input type="text" name="username" id=""><br>
+                Gender : <input type="radio" name="gender" id="gender" value="male">Male
+                <input type="radio" name="gender" id="gender" value="female">Female
+                <br>
+                Qualification:
+                <input type="checkbox" name="q1" id="" value="10th">10th
+                <input type="checkbox" name="q1" id="" value="12th">12th
+                <input type="checkbox" name="q1" id="" value="Bechlor">BCA
+                <input type="checkbox" name="q1" id="" value="Master">MCA
+
+        <input type="submit" value="Save">
+    </form>
+    </div>
+    <script>
+        ///^[0-9]{10,12}$/
+        let res = document.getElementsByTagName("p")
+        console.log(res);
+        for(i=0;i<res.length;i++){
+            if((i+1)%2 == 0)
+                res[i].style.color="red"
+            else
+                res[i].style.color="blue"
+
+        }
+        let arr = [];
+        let tr='';
+        const saveData = ()=>{
+            console.log("save data func called..");
+            let name = document.getElementsByName('username')
+            console.log(name[0].value);
+            let g1 = document.getElementsByName("gender")
+            console.log(g1);
+            let qual_data = document.getElementsByName("q1")
+            for(i=0;i<qual_data.length;i++){
+                if(qual_data[i].checked){
+                    arr.push(qual_data[i].value)
+                    tr+= qual_data[i].value
+                    console.log("you have selected-- "+qual_data[i].value);
+                }
+            }
+            console.log(arr);
+            console.log(tr);
+            
+            return false;
+        }
+    </script>
+</body>
+</html>
