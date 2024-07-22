@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>hello</p>
+        <p>hsgjkhg</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum fugit, sit error temporibus consequatur ut harum assumenda explicabo quia ullam voluptates earum natus aspernatur vero veniam, tempora quo voluptas eaque.</p>
+    </div>
+    <script>
+        let a = document.querySelectorAll("p")
+        console.log(a.length);
+        
+        console.log(typeof a);
+        console.log(a);
+        console.log(a[1].innerText);
+        let abc = a.map((i)=>i.innerHTML)
+        console.log(abc);
+    </script>
+</body>
+</html>

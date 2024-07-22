@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3,4,5]
+        // let ans1 = arr.map((i)=>{
+        //     return i+10;
+        // })
+        let ans1 = arr.map((i)=> i+10 )
+        console.log(ans1);
+        document.write('<br> Ans is '+ans1)
+        ans1 = arr.filter((i)=>{
+            return i%2==0;
+        })
+        
+        console.log(ans1);
+        document.write('<br> Ans is '+ans1)
+        let user_arr = [
+    {
+        id:"101",
+        name:"jhdfs",
+        age:25,
+        salary:22000
+    },
+    {
+        id:"102",
+        name:"test",
+        age:22,
+        salary:13500
+    },
+    {
+        id:"103",
+        name:"abc",
+        age:18,
+        salary:26000
+    }
+]
+let n = []
+let new_arr = user_arr.map((i)=>{
+        n.push({
+            name:i.name,
+            age:i.age
+        })    
+})
+new_arr = user_arr.filter((i)=>{
+        return i.age > 20   
+})
+//console.log(new_arr);
+console.log(n);
+let num = [5,20,100,60,1];
+let final_ans = num.reduce((total,i)=>{
+    console.log("total "+total); //5 i=20 5>20 20>100 100>60 100>
+    console.log("i "+i);
+    if(total > i) { 
+        i=total
+    }
+    return i;
+})
+console.log(final_ans);
+    </script>
+</body>
+</html>

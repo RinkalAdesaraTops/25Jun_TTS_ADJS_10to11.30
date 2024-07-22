@@ -24,7 +24,6 @@ let user_arr = [
     }
 ]
 
-
 //I want to print only name & age
 //Search those users whose salary is minimum 15000
 //Search those users whose age is minimum 20
