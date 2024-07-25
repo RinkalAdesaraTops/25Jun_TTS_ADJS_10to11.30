@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Calculator</h3>
+    <input type="text" name="no" id="no"> <br /><br />
+
+    
+    <button onclick="disp(1)">1</button>
+    <button onclick="disp(2)">2</button>
+    <button onclick="disp(3)">3</button><br /><br />
+    <button onclick="disp(4)">4</button>
+    <button onclick="disp(5)">5</button>
+    <button onclick="disp(6)">6</button><br /><br />
+    <button onclick="disp('+')" >+</button>
+    <button onclick="disp('-')">-</button>
+    <button onclick="disp('*')">*</button>
+    <button onclick="disp('/')">/</button>
+    <button onclick="finalAns()">=</button>
+    <button onclick="finalAns()">Back</button>
+
+    <script>
+        let txt = '';
+        const disp = (no)=>{
+            txt += no;
+            document.getElementById("no").value = txt
+        }
+        const finalAns = ()=>{
+            let ans = eval(txt)
+            document.getElementById("no").value = ans
+            txt =ans;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const findPer = (total,n)=>{
+            console.log("percentage is "+(total/n));
+        }
+        const HOF = (func,t,n)=>{
+                return func(t,n)            
+        }
+        let total = 45+65+78+35+30;
+        
+        HOF(findPer,total,5)
+
+        const abc = ()=>{
+            xyz()
+            console.log("sdfgsdf");
+        }
+        const xyz = ()=>{
+            pqr()
+        }
+        const pqr = ()=>{
+            data() //error
+        }
+        const data = ()=>{
+            return true;
+        }
+       
+       
+
+    </script>
+</body>
+</html>

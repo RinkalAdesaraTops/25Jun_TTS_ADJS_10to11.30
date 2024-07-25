@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>hello</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis vero aspernatur vitae nam exercitationem obcaecati, veniam praesentium sed sit, doloribus nostrum et. Magni molestiae doloribus, vel asperiores laborum delectus voluptates?</p>
+        <p>
+            <span>jkgsdfkg sdkjgfskdjgf</span>
+        </p>
+    </div>
+    <script>
+        let arr = [10,20,30,40]
+        console.log("array type is "+typeof(arr));
+        arr1 = {
+            "name":'Rinkal',
+            "age":25,
+            "salary":30000
+        }
+        console.log("object type is "+typeof(arr1));
+        console.log(arr);
+        let r = arr.map((i)=>{
+                return i*2;
+        })
+        console.log(r);
+        let res = document.querySelectorAll("p")
+        console.log(res);
+        console.log(Array.isArray(res));
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(arr1));
+    </script>
+</body>
+</html>
